@@ -163,27 +163,47 @@
         </form>
     </div>
 
-    <script>
+  <script>
         function validateForm() {
             const form = document.getElementById('registrationForm');
             const inputs = form.querySelectorAll('input, select');
+            const phone = document.querySelector('input[name="so-dien-thoai"]').value.trim();
+            const email = document.querySelector('input[name="email"]').value.trim();
             let isValid = true;
-
+            let errorMessage = "";
+    
+            // Function to check if required fields are filled
             inputs.forEach(input => {
                 if (!input.value) {
                     isValid = false;
+                    errorMessage = `Vui lòng điền đầy đủ thông tin: ${input.previousElementSibling.textContent.trim()}`;
                 }
             });
-
+    
+            // Validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email && !emailRegex.test(email)) {
+                isValid = false;
+                errorMessage = "Email không đúng định dạng.";
+            }
+    
+            // Validate phone format (10 digits)
+            const phoneRegex = /^[0-9]{10}$/;
+            if (phone && !phoneRegex.test(phone)) {
+                isValid = false;
+                errorMessage = "Số điện thoại phải có 10 chữ số.";
+            }
+    
+            // Show appropriate alert message or proceed
             if (!isValid) {
-                alert("Vui lòng nhập đầy đủ thông tin.");
+                alert(errorMessage);
+                return false;
             } else {
-                alert("Đăng kí thành công"); // Hiển thị thông báo
-                form.submit(); // Sau khi thông báo, gửi form
-                window.location.href = 'index.html';
+                alert("Đăng ký thành công!"); // Success message
+                form.submit(); // Submit the form
+                window.location.href = 'index.html'; // Redirect after submission
             }
         }
-
     </script>
 </body>
 </html>
