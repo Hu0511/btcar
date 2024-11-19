@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes Maybach GLS</title>
+    <style>
+        body{
+            font: optional;
+            box-sizing: border-box;
+        }
+        .header {
+            position:relative;
+  background-color: #000;
+  width:100%;
+  display:block;
+  box-sizing: border-box;
+}
+
+.header1 {
+  border-bottom: 2px solid rgb(66, 66, 66);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 10px 0px;
+  box-sizing: border-box;
+
+
+}
+
+.header-logo img {
+  width: 150px;
+  height: 125px;
+  text-align: center;
+  margin-right: 800px;
+}
+
+.language-options a {
+  text-decoration: none;
+  color: #fff;
+  gap:20px;
+  box-sizing: border-box;
+  font-size: 1.15em;
+
+}
+.language-options a:hover{
+  color:aquamarine;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.search-box input {
+  background: none;
+  border: none;
+  color: #bbb;
+  padding: 5px;
+  outline: none;
+  width:300px;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  color: #bbb;
+  cursor: pointer;
+}
+
+.menu {
+  display: inline-flex;
+  justify-content: center;
+  background-color: rgb(35, 35, 35);
+  padding: 10px 40px;
+  width:100%;
+  box-sizing: border-box;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0px 30px;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.menu1 {
+  margin-left: 480px;
+  color: #bbb;
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%; /* Positioned below the parent */
+  left: 0;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  font-size:1em;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Show dropdown on hover */
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+
+.dropdown1 {
+  position: relative;
+}
+
+.dropdown-content1 {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 0; /* Positioned below the parent */
+  left: 100%;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content1 a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown1:hover .dropdown-content1 {
+  display: block; /* Show dropdown on hover */
+}
+
+.dropdown-content1 a:hover {
+  background-color: #ddd;
+}
+/* Container for navigation */
+.nav-container {
+            display: flex;
+            border-bottom: 2px solid lightgrey;
+            margin: 0;
+            padding: 10px;
+            list-style-type: none;
+            position:relative;
+        }
+
+        /* Style for each tab */
+        .nav-tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+            border-bottom: 3px solid transparent;
+            transition: color 0.3s, border-bottom 0.3s;
+            font-size: 1.5em;
+        }
+
+        /* Hover effect */
+        .nav-tab:hover {
+            color: #000;
+        }
+
+        /* Active tab styling */
+        .nav-tab.active {
+            color: #000;
+            border-bottom: 3px solid #007bff; /* Blue underline */
+        }
+        
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+        }
+        .specs {
+            max-width: 600px;
+        }
+        .specs h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .specs-table th, .specs-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .specs-table th {
+            font-weight: bold;
+        }
+        .price-note {
+            font-size: 14px;
+            color: gray;
+            margin-top: 10px;
+        }
+        .button-specs {
+            display: inline-flex;
+            align-items: center;
+            background-color: #d50000;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            justify-content: flex-end; 
+        }
+        .button-specs:hover {
+            background-color: #b00000;
+        }
+        .button-specs::before {
+            content: "❯";
+            margin-right: 8px;
+            font-size: 18px;
+        }
+        .container1 {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .header1 {
+            text-align: center;
+            padding: 20px;
+        }
+        .header1 h2 {
+            font-size: 24px;
+font-weight: bold;
+        }
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            background-color: #f8f8f8;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .nav-tabs a {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            margin: 0 5px;
+        }
+        .nav-tabs a.active {
+            background-color: #c60000;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .highlight-features {
+            display: grid;
+            grid-template-columns: repeat(4, 2fr);
+            gap: 20px;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .feature-item {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+        .feature-item img {
+            width: 100%;
+            height: auto;
+        }
+        .feature-item h3 {
+            font-size: 20px;
+            padding: 10px;
+            margin: 0;
+            color: #333;
+        }
+        .feature-item p {
+            padding: 0 10px 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        /* Ẩn nội dung chi tiết mặc định */
+        .feature-detail {
+            display: none;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+        }
+        .feature-detail h3{
+            font-size:20px;
+        }
+        .feature-detail{
+            font-size: 16px;
+        }
+        .tab-container {
+            display: flex;
+            background-color: #f5f5f5;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            justify-content: center;
+        }
+        .tab.active {
+            color: white;
+            background-color: red;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+        }
+        
+        .tab-content.active {
+            display:flex;
+        }
+
+        .tab {
+            margin: 0 15px;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #d50000;
+            color: white;
+            border-radius: 5px;
+font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .tab:not(.active) {
+            background-color: #f5f5f5;
+            color: black;
+        }
+        .slideshow-container {
+  position: relative;
+  width:100%;
+}
+
+/* Mỗi slide */
+.slide {
+  display: none;
+  text-align: center;
+}
+
+/* Ảnh */
+.slide img {
+  width: 1000px;
+ 
+}
+
+/* Nút mũi tên trái/phải */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.3s;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Nút mũi tên trái */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Nút mũi tên phải */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Hiệu ứng hover */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header1">
+        
+            <div class="header-logo">
+                <img src="https://cdn.freelogovectors.net/wp-content/uploads/2023/05/mercedes_benz_logo-freelogovectors.net_.png">
+            </div>
+            <!-- Language and Search -->
+            <div class="language-options">
+                <a href="dangki.html">Đăng kí</a>| &nbsp;<a href="dangnhap.html">Đăng nhập</a>
+            </div>
+            
+            <!-- Search Box -->
+            <div class="search-box">
+                <input type="text" placeholder="Từ khóa tìm kiếm">
+                <button>&#128270;</button>
+            </div>
+        </div>
+
+        <!-- Main Menu -->
+        <div class="menu">
+            <div class="dropdown">
+                <a href="index.html">Trang chủ</a>
+
+            </div>
+            <div class="dropdown">
+            <a href="tatca.html">Các hãng xe</a>
+            <div class="dropdown-content">
+                <a href="sanphamPorsche.html">Porsche</a>
+                <a href="sanphamMercedes.html">Mercedes</a>
+                <a href="sanphamBMW.html">BMW</a>
+            </div>
+            </div>
+            <div class="dropdown">
+            <a href="dangkilaithu.html">Đăng kí lái thử</a>
+        </div>
+        <div class="dropdown">
+            <a href="dichvu.html">Dịch vụ</a>
+            <div class="dropdown-content">
+                <a href="dichvubanhang.html">Dịch vụ bán hàng</a>
+                <a href="dichvuhaumai.html">Dịch vụ hậu mãi</a>
+            </div>
+            </div>
+        </div>
+            
+        </div>
+    </div>
+    </div>
+    <!--phan2-->
+    <img src="https://jesmb.de/wp-content/uploads/elementor/thumbs/gls600-5-qaiaprhk4xd791b95kp5gwwux3jyiwvfhxqyabkynw.jpg" width="100%">
+    <div class="container">
+        <div class="image-container">
+            <img src="https://autobikes.vn/stores/news_dataimages/nguyenthuy/072022/14/15/3909_Mercedes-Maybach_GLS_600_Edition_100__8.jpg?rt=20220714154124" alt="Porsche 718 Boxster">
+        </div>
+        <div class="specs">
+            <h2>Thông số kỹ thuật</h2>
+            <table class="specs-table">
+                <tr>
+                    <th>Công suất</th>
+                    <td>300 PS (220 kW)</td>
+                </tr>
+                <tr>
+                    <th>Mô men xoắn cực đại</th>
+                    <td>380 Nm</td>
+                </tr>
+                <tr>
+                    <th>Tăng tốc từ 0 - 100 km/giờ</th>
+                    <td>4,7 giây (4,5 giây với Gói Sport Chrono)</td>
+                </tr>
+                <tr>
+                    <th>Tốc độ tối đa</th>
+                    <td>275 km/giờ</td>
+                </tr>
+                <tr>
+                    <th>Mức tiêu thụ kết hợp</th>
+                    <td>9,56 lít/100 km</td>
+                </tr>
+                <tr>
+                    <th>Lượng khí thải CO2</th>
+                    <td>–</td>
+                </tr>
+                <tr>
+                    <th>Giá tiêu chuẩn</th>
+                    <td>3.960.000.000 VNĐ</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <a href="thongso maybach GLS.html" class="button-specs">Tất cả thông số</a>
+    <div class="container1">
+        <h1>Đặc điểm nội bật</h1>
+        <!-- Thanh điều hướng -->
+        <div class="tab-container">
+            <div class="tab active" onclick="showTabContent(0)">Ý tưởng</div>
+            <div class="tab" onclick="showTabContent(1)">Hệ truyền động</div>
+            <div class="tab" onclick="showTabContent(2)">Hệ thống treo</div>
+            <div class="tab" onclick="showTabContent(3)">Độ an toàn</div>
+            <div class="tab" onclick="showTabContent(4)">Tiện nghi</div>
+        </div>
+        <!-- Các đặc điểm nổi bật -->
+        <div class="tab-content active">
+        <div class="highlight-features">
+                <div class="feature-item" onclick="toggleFeatureDetail('detail1')">
+                        <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/porsche-Idea-420x280.jpg" alt="Ý tưởng 718">
+                        <h3>Ý tưởng Maybach</h3>
+<p>Boxster và Cayman hoàn toàn mới là chương kế tiếp của kỳ tích 718.</p>
+                    </div>
+                    <div class="feature-item" onclick="toggleFeatureDetail('detail2')">
+                        <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/porsche-zoom-2-420x280.jpg" alt="Nguyên tắc của dòng xe thể thao động cơ đặt giữa">
+                        <h3>Nguyên tắc của dòng xe thể thao động cơ đặt giữa</h3>
+                        <p>Mang đến trải nghiệm lái xe đầy phấn khích, tính ổn định và cân bằng vượt trội.</p>
+                    </div>
+                    <div class="feature-item" onclick="toggleFeatureDetail('detail3')">
+                        <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/BX17I3AOX0001_layout-420x280.jpg" alt="Đặc tính 718 Boxster">
+                        <h3>Đặc tính</h3>
+                        <p>Đáng để khao khát. Cuộc sống quá ngắn ngủi cho những gì nhàm chán.</p>
+                    </div>
+                    <div class="feature-item" onclick="toggleFeatureDetail('detail4')">
+                        <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/porsche-zoom-38-420x280.jpg" alt="Thiết kế">
+                        <h3>Thiết kế</h3>
+                        <p>Đáng để khao khát. Cuộc sống quá ngắn ngủi cho những gì nhàm chán.</p>
+                    </div>
+            
+            </div>
+        </div>
+        <div class="tab-content">
+            <div class="highlight-features">
+            <div class="feature-item" onclick="toggleFeatureDetail('detail5')">
+                <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/porsche-zoom-10-420x280.jpg">
+                <h3>Hệ thống ống xả thể thao</h3>
+                <p>Với hệ thống ống xả thể thao tùy chọn, âm thanh vốn mạnh mẽ của động cơ giữa càng...</p>
+            </div>
+            <div class="feature-item" onclick="toggleFeatureDetail('detail6')">
+                <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/porsche-zoom-11-420x280.jpg">
+                <h3>Hộp số sàn 6 cấp</h3>
+                <p>Dòng xe được trang bị với hộp số sàn 6 cấp sang số êm ái điều chỉnh tối ưu...</p>
+            </div>
+            <div class="feature-item" onclick="toggleFeatureDetail('detail7')">
+                <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/porsche-zoom-1-420x280.jpg">
+                <h3>Hệ thống điều phối lực kéo vector của Porsche (PTV)</h3>
+<p>PTV là một hệ thống tùy chọn nhằm tăng cường tính năng lái năng động và ổn định. Cùng với....</p>
+            </div>
+            <div class="feature-item" onclick="toggleFeatureDetail('detail8')">
+                <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/porsche-zoom-9-420x280.jpg">
+                <h3>Các công nghệ tăng cường hiệu năng</h3>
+                <p>Công nghệ tự động khởi động/ ngắt động cơ sẽ ngắt động cơ khi tốc độ xe giảm xuống dưới 7 km/h....</p>
+            </div>
+    
+            </div>
+        </div>
+        <div class="tab-content">
+            <div class="highlight-features">
+                <div class="feature-item" onclick="toggleFeatureDetail('detail9')">
+                    <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/porsche-zoom-12-420x280.jpg">
+                    <h3>Hệ thống lái</h3>
+                    <p>Ai cũng có thể chạy trên đường thẳng và hẹp. Chỉ có khúc cua mới là thử thách dũng khí...</p>
+                </div>
+                <div class="feature-item" onclick="toggleFeatureDetail('detail10')">
+                    <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/porsche-zoom-16-420x280.jpg">
+                    <h3>SPORT button</h3>
+                    <p>The SPORT button enables you to select a suspension setup where the emphasis is on either comfort or sporty performance. ...</p>
+                </div>
+                <div class="feature-item" onclick="toggleFeatureDetail('detail11')">
+                    <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/porsche-zoom-15-420x280.jpg">
+                    <h3>Mâm xe</h3>
+                    <p>Dòng xe đều được trang bị bộ mâm 18inch nổi bật. Dòng xe S được....</p>
+                </div>
+                <div class="feature-item" onclick="toggleFeatureDetail('detail12')">
+                    <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/porsche-zoom-13-420x280.jpg">
+                    <h3>Hệ thống treo chủ động của Porsche (PASM)</h3>
+                    <p>Tùy chọn Hệ thống treo chủ động của Porsche...</p>
+                </div>
+                </div>
+        </div>
+        <div class="tab-content">
+            <div class="highlight-features">
+                <div class="feature-item" onclick="toggleFeatureDetail('detail13')">
+                    <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/porsche-zoom-20-420x280.jpg">
+<h3>Hệ thống túi khí và Thanh bảo vệ chống va đập bên hông của Porsche (POSIP)</h3>
+                    <p>Dòng xe hoàn toàn mới được trang bị công nghệ túi khí bảo vệ toàn thân tiên tiến cho người lái...</p>
+                </div>
+                <div class="feature-item" onclick="toggleFeatureDetail('detail14')">
+                    <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/porsche-zoom-21-420x280.jpg">
+                    <h3>Hệ thống đèn chiếu sáng</h3>
+                    <p>Mưa. Sương mù. Bóng tối. Không gì có thể làm vận động viên đích thực ...</p>
+                </div>
+                <div class="feature-item" onclick="toggleFeatureDetail('detail15')">
+                    <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/porsche-zoom-39-420x280.jpg">
+                    <h3>Các thanh bảo vệ khi lật xe</h3>
+                    <p>Trên dòng xe 718 Boxster mui trần, bộ thanh bảo vệ khi lật xe tạo khoảng trống....</p>
+                </div>
+                <div class="feature-item" onclick="toggleFeatureDetail('detail16')">
+                    <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/porsche-zoom-19-420x280.jpg">
+                    <h3>Hệ thống phanh</h3>
+                    <p>Trong thể thao, hiệu suất có vai trò cực kì quan trọng, cả về động cơ và hệ thống ...</p>
+                </div>
+                </div>
+        </div>
+        <div class="tab-content">
+            <div class="highlight-features">
+                <div class="feature-item" onclick="toggleFeatureDetail('detail13')">
+                    <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/porsche-zoom-28-420x280.jpg">
+                    <h3>Gói thiết kế hệ thống chiếu sáng</h3>
+                    <p>Tùy chọn Gói thiết kế hệ thống chiếu sáng vừa thiết...</p>
+                </div>
+                <div class="feature-item" onclick="toggleFeatureDetail('detail14')">
+                    <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/porsche-zoom-26-420x280.jpg">
+                    <h3>Nội thất</h3>
+                    <p>Vô – lăng thể thao hoàn toàn mới với thiết kế thuần khiết, ...</p>
+                </div>
+                <div class="feature-item" onclick="toggleFeatureDetail('detail15')">
+                    <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/porsche-zoom-30-420x280.jpg">
+                    <h3>Tùy chọn ghế</h3>
+<p>Ghế thể thao
+                        Ghế thể thao đầy thoải mái và ôm người lái ngay ...</p>
+                </div>
+                <div class="feature-item" onclick="toggleFeatureDetail('detail16')">
+                    <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/porsche-image-1-420x280.jpg">
+                    <h3>Các hệ thống hỗ trợ</h3>
+                    <p>Hệ thống Kiểm soát hành trình chủ động kết hợp tính năng An toàn...</p>
+                </div>
+                </div>
+        </div>
+        
+        <!-- Nội dung chi tiết ẩn của Nguyên tắc của dòng xe thể thao động cơ đặt giữa -->
+        <div id="detail1" class="feature-detail">
+            <h3>Ý tưởng Maybach</h3>
+            <p>Boxster và Cayman hoàn toàn mới là chương kế tiếp của kỷ nguyên 718. Ngay từ trong tim, động tăng áp bốn xy-lanh đối đỉnh cùng chung nhịp đập với tinh thần thi đấu mang lại vô số vinh quang chiến thắng. Dòng xe này tồn tại ý chí phá vỡ mọi tiêu chuẩn và truyền cảm hứng. Vì thế, hoàn toàn hợp lý khi tên của hai mẫu xe này cùng mang thêm ba chữ số, kế thừa huyền thoại 718.
+                Dòng xe 718 hoàn toàn mới được chế tác theo tinh thần thể thao thuần khiết. Những mẫu xe roadster động cơ đặt giữa này thống nhất tinh thần thể thao của huyền thoại Porsche 718 với xe thể thao của tương lai – và truyền lửa vào những cung đường hiện nay trên thế giới. Với một mục tiêu: sống trọn từng ngày.
+                So sánh với các dòng xe trước, kết quả đạt được là một thiết kế mới, hoàn toàn nổi bật, hệ thống treo đậm chất thể thao hơn và một loạt các hệ thống hiệu suất, tiện nghi và hỗ trợ mới. Và, tất nhiên, công suất động cơ tăng áp đạt đến 350 đơn vị mã lực – cho dù mức tiêu thụ nhiên giảm thiểu đáng kể. Chỉ còn một câu hỏi chưa được trả lời: bạn còn đang chờ đợi điều gì? 718 Boxster và 718 Cayman hoàn toàn mới. Thể thao thuần khiết.</p>
+        </div>
+        <div id="detail2" class="feature-detail">
+            <h3>Nguyên tắc của dòng xe thể thao động cơ đặt giữa</h3>
+            <p>Điều gì làm cho dòng xe 718 hoàn toàn đặc biệt đến thế? Chính là hiệu suất, điều khiển, thiết kế và thể tích rộng rãi của cả hai khoang hành lý. Nhưng trên hết là: khái niệm động cơ đặt giữa đã làm cho mọi điều trên khả thi ngay từ đầu.
+Động cơ được đặt không xa hơn 30cm phía sau người lái. Hiệu ứng đầu tiên: tiếng động cơ vang dội từ phía sau. Hiệu ứng thứ hai: khả năng vào cua năng động phi thường, nhờ vào trọng tâm thấp và nằm chính giữa xe. Xy – lanh được đặt đối đỉnh cũng giúp giảm thiểu dao động, tác động tích cực đến hoạt động trơn tru của động cơ. Thêm một điểm cộng cho tính năng lái năng động: công suất của động cơ được tập trung truyền tải trực tiếp đến trục sau.
+                Chúng tôi khai thác sức mạnh này bằng cách nào? Thông qua việc giảm trọng lượng xe và phân phối tối ưu trọng lượng còn lại. Thiết kế gọn nhẹ của một chiếc xe hai chỗ ngồi cũng chiếm phần quan trọng. Và không cần phải hy sinh tính tiện nghi cũng như tính thiết thực hàng ngày.
+                Tuy nhiên, ngay khi động cơ đặt giữa khởi động, chỉ còn một điều quan trọng: cả một thế giới đầy những đoạn đường cong và khúc cua ngoằn ngoèo. Và bạn - ở ngay chính giữa những cung đường thử thách ấy.</p>
+        </div>
+        <div id="detail3" class="feature-detail">
+            <h3>Đặc tính</h3>
+            <p>Cuộc sống quá ngắn ngủi cho những cụm từ "nêu mà". Quá ngắn ngủi cho những giấc mơ còn bỏ ngỏ. 718 Boxster hoàn toàn mới đưa ra một tuyên bố rõ ràng: Đi nào!
+                718 Boxster mới tái hiện huyền thoại 718 bằng cách giữ gìn khái niệm cá tính tự do của một chiếc roadster thuần khiết: nhiều đoạn đường cong và khúc cua gấp, nhiều gió ngược, và đầy phấn khích. Tóm lại, một trải nghiệm lái khoáng đạt. Tiền đề lý tưởng trước một trải nghiệm thú vị nhất: cuộc sống.
+            </p>
+        </div>
+        <div id="detail4" class="feature-detail">
+            <h3>Thiết kế ngoại thất</h3>
+            <p>Chính xác, không cầu kì. Tự tin, không bị hạn chế. Thấp, rộng và linh hoạt. Thiết kế ngoại thất của 718 Boxster hoàn toàn mới dẫn dắt một kỷ nguyên mới cho Boxster và Cayman với đường nét thể thao, nổi bật cùng những đường viền rõ nét.
+                Nhìn ngang, hình dáng hốc hút gió làm cho phần đầu xe càng rộng hơn – và càng thêm nét sắc sảo. Còn về xe? Thiết kế Porsche, không thể nhầm lẫn được. Nằm cao hơn nắp ca – pô, về xe được tô điểm bằng thiết kế hoàn toàn mới của cụm đèn pha, để lộ cấu trúc bên trong kết hợp với đèn LED ban ngày.
+Hông xe làm nổi bật thiết kế động cơ đặt giữa. Về xe lớn, thiết kế dành cho bánh xe lớn đến 20 inch. Một điều rõ ràng rằng: dòng xe 718 không được thiết kế để nằm trong garage mà để được trải nghiệm. Điều này giải thích chính xác mục đích hướng không khí vào hốc hút gió đặt hai bên hông xe của đường gân trên cửa xe. Cung cấp nguồn khí tối ưu cho động cơ tăng áp hoàn toàn mới, nền tảng cho lực đẩy đầy mạnh mẽ.
+                Chi tiết thể thao khác: gương chiếu hậu gắn ngoài hình chưa “V”.
+                Khi đóng, mui xe bằng vải của 718 Boxster hoàn thiện hình dáng nhanh nhẹn của một chiếc xe thể thao chuẩn mực. Bằng một nút bấm, mui xe đóng và mở tự động trong vòng 9 giây – ngay cả khi xe đang di chuyển với tốc độ tối đa 50km/h.
+                Phần đuôi của dòng xe 718 hoàn toàn mới diễn tả hiệu suất thể thao tối thượng – và cũng đại diện cho năng suất bậc nhất đến từ các nhà thiết kế của chúng tôi. Được định nghĩa rõ ràng, gọn ghẽ.</p>
+            <h3>Thiết kế nội thất</h3>
+            <p>Điều khiển trực quan, thiết kế định hướng hiệu suất, một thiết kế gọn gàng. Nội thất của dòng xe 718 hoàn toàn đẳng cấp với hiệu suất thể thao.
+                Đường nhấn mạnh mẽ theo chiều ngang tạo hình nổi bật cho thiết kế bảng táp-lô mới cho dòng xe 718. Và không cần phải hy sinh cách bố trí khoa học xuất sắc, nổi tiếng của Porsche: bảng điều khiển trung tâm phía trên rút ngắn khoảng cách giữa vô – lăng và cần số, trong khi các nút chức năng bố trí thuận tiện giúp tiết kiệm thời gian.
+                Đua xe thể thao trong hình thái thuần khiết nhất: vô-lăng thể thao hoàn toàn mới lấy cảm hứng từ 918 Spyder. Vô-lăng thể thao GT tùy chọn với đường kính nhỏ hơn nâng tầm cảm nhận trong khoang lái. Bộ ba đồng hồ đo vòng tua được đặt chính giữa và màn hình màu 4,6inch đặt ngay bên cạnh là một điểm nhấn đầy cá tính.
+                Hệ thống quản lý liên lạc của Porsche (PCM) được đổi mới toàn diện với màn hình cảm ứng đa điểm 7 inch. Với bề mặt kính chất lượng cao, đây là điểm cộng hoàn hảo cho bảng điều khiển trung tâm.
+                Tất cả mọi điều trên đều lý tưởng cho phong cách sống thể thao và năng động. Thế còn các chi tiết? Hoàn toàn phụ thuộc vào bạn. Tuyển chọn từ những tùy chọn cá nhân hóa toàn diện, một loạt các vật liệu và màu sắc.</p>
+        </div>  
+        <div id="detail5" class="feature-detail">
+            <h3>Hệ thống ống xả thể thao</h3>
+<p>Với hệ thống ống xả thể thao tùy chọn, âm thanh vốn mạnh mẽ của động cơ giữa càng trở nên uy lực hơn – chỉ với một nút bấm. Hệ thống ống xả thể thao không chỉ mang đến âm thanh đặc trưng mà còn bắt mắt. Ống xả thể thao đặt giữa bằng thép không gỉ mạ nhôm đánh bóng trong màu đen hoặc bạc.</p>
+        </div>
+        <div id="detail6" class="feature-detail">
+            <h3>Hộp số sàn 6 cấp</h3>
+            <p>Dòng xe 718 được trang bị với hộp số sàn 6 cấp sang số êm ái điều chỉnh tối ưu với biểu đồ động cơ. Sang số thể thao và nhanh nhạy. Thời gian sang số ngăn cho trải nghiệm lái đầy thể thao và hấp dẫn. Trải nghiệm năng động hơn với tùy chọn Gói kích hoạt chức năng thể thao: trong chế độ SPORT và SPORT PLUS, tính năng điều chỉnh ga chủ động bảo đảm tối ưu tốc độ động cơ khi trả số, một trải nghiệm lái phấn khích với âm thanh ấn tượng.</p>
+        </div>
+        <div id="detail7" class="feature-detail">
+            <h3>Hệ thống điều phối lực kéo vector của Porsche (PTV)</h3>
+            <p>PTV là một hệ thống tùy chọn nhằm tăng cường tính năng lái năng động và ổn định. Cùng với khóa vi sai cơ phía sau, hệ thống này hoạt động bằng cách phân bố mô-men xoắn truyền đến bánh sau.
+                Khi xe vào cua gấp, bánh sau phía trong nhận được lực phanh vừa phải. Do đó, một lượng lớn năng lượng được phân phối đến bánh sau phía ngoài, làm xe chuyển động ngang. Điều này tạo ra cảm giác đánh lái trực tiếp và thể thao ngay từ điểm vào cua.
+                Tại tốc độ thấp và trung bình, PTV tăng cường tính linh hoạt và khả năng đánh lái chính xác một cách đáng kể. Tại tốc độ cao và khi tăng tốc để thoát cua, khóa vi sai phía sau điều khiển cơ hoạt động để cung cấp sự ổn định và lực kéo.</p>
+        </div>
+        <div id="detail8" class="feature-detail">
+            <h3>Các công nghệ tăng cường hiệu năng</h3>
+            <p>Công nghệ tự động khởi động/ ngắt động cơ sẽ ngắt động cơ khi tốc độ xe giảm xuống dưới 7 km/h, như ở đèn giao thông. Ngay từ khi bạn nhả chân côn hoặc đạp chân ga, động cơ khởi động lại – nhanh chóng và êm ái.
+                Kết hợp với Hộp số tự động ly hợp kéo của Porsche (PDK), chức năng này chạy trơn sẽ kích hoạt khi tình huống cho phép. Bằng cách này, động năng của xe được sử dụng tối ưu, cho phép xe chạy trên với khoảng cách dài hơn.</p>
+        </div>
+        <div id="detail9" class="feature-detail">
+            <h3>Hệ thống lái</h3>
+<p>Ai cũng có thể chạy trên đường thẳng và hẹp. Chỉ có khúc cua mới là thử thách dũng khí đích thực. Chỉ có khúc cua mới bộc lộ được bản chất của xe thể thao. Vì thế, hệ thống treo có thể làm chủ được mọi thử thách thể thao mới quan trọng hơn hết và xứng tầm với công suất mạnh mẽ của động cơ.
+                Các thành phần của trục xe hầu hết được chế tạo từ nhôm, làm cho trọng lượng nhẹ hơn. Chiều rộng, chiều dài cơ sở và kết cấu hệ thống treo đặc biệt mang lại cảm giác điều khiển linh hoạt và chính xác.
+                Hệ thống lái trợ lực cơ điện
+                Hệ thống lái trực tiếp của dòng xe 718 có tỷ lệ rõ ràng hơn so với đời trước cho trải nghiệm lái thể thao hơn, vào cua linh hoạt – với sự thoải mái cao cấp.
+                Hệ thống lái trợ lực điện cao cấp
+                Tùy chọn Hệ thống lái trợ lực điện tập trung vào sự thoải mái thay đổi tỷ lệ đánh lái theo tốc độ. Tại tốc độ cao, vô lăng sẽ vững hơn. Tại tốc độ thấp, tỷ lệ đánh lái được điều chỉnh để dễ dàng xoay chuyển và đỗ xe.</p>
+        </div>
+        <div id="detail10" class="feature-detail">
+            <h3>SPORT button</h3>
+            <p>Ai cũng có thể chạy trên đường thẳng và hẹp. Chỉ có khúc cua mới là thử thách dũng khí đích thực. Chỉ có khúc cua mới bộc lộ được bản chất của xe thể thao. Vì thế, hệ thống treo có thể làm chủ được mọi thử thách thể thao mới quan trọng hơn hết và xứng tầm với công suất mạnh mẽ của động cơ.
+                Các thành phần của trục xe hầu hết được chế tạo từ nhôm, làm cho trọng lượng nhẹ hơn. Chiều rộng, chiều dài cơ sở và kết cấu hệ thống treo đặc biệt mang lại cảm giác điều khiển linh hoạt và chính xác.The SPORT button enables you to select a suspension setup where the emphasis is on either comfort or sporty performance. At the push of a button, the engine dynamics become even more direct. In addition, the optional sports exhaust systern is activated automatically.
+                In vehicles with Porsche Doppelkupplung (PDK), upshifts take place at higher engine speeds and downshifts happen snooer.</p>
+        </div>
+        <div id="detail11" class="feature-detail">
+            <h3>Mâm xe</h3>
+            <p>Dòng xe 718 Boxster và Cayman đều được trang bị bộ mâm 18inch nổi bật. Dòng xe S được trang bị bộ mâm 19inch với hai thiết kế mâm xe hoàn toàn mới.
+Trên tất cả dòng xe 718, mâm xe được chế tạo từ hợp kim nhẹ - đặc trưng trên xe thể thao. Mâm xe phía sau được tăng kích thước chiều ngang thêm nữa inch, cung cấp tính ổn định cao hơn và tăng cường hiệu suất vào cua một cách tổng quát.
+                Lực cản lăn và trọng lượng bánh tương đối nhỏ làm giảm mức tiêu thụ nhiên liệu. Kiểm soát áp suất lốp xe (TPM) tăng cường độ an toàn.
+                Ngoài ra còn có thêm nhiều tùy chọn cho mâm xe 20inch.
+                In vehicles with Porsche Doppelkupplung (PDK), upshifts take place at higher engine speeds and downshifts happen snooer.</p>
+        </div>
+        <div id="detail12" class="feature-detail">
+            <h3>Hệ thống treo chủ động của Porsche (PASM)</h3>
+            <p>Tùy chọn Hệ thống treo chủ động của Porsche, hệ thống kiểm soát giảm chấn điện tử, liên tục điều chỉnh lực giảm chấn dựa trên điều kiện đường và phong cách lái xe. Ngoài ra, thân xe được hạ thấp hơn 10mm.
+                PASM có hai chế độ lựa chọn bằng nút bấm riêng biệt tại bảng điều khiển trung tâm: “Normal”, kết hợp giữa hiệu suất và thoải mái, và “Sport” hệ thống treo được thiết lập cứng hơn.</p>
+        </div>
+        <div id="detail13" class="feature-detail">
+            <h3>Hệ thống túi khí và Thanh bảo vệ chống va đập bên hông của Porsche (POSIP)</h3>
+            <p>Dòng xe 718 hoàn toàn mới được trang bị công nghệ túi khí bảo vệ toàn thân tiên tiến cho người lái và hành khách phía trước. Các túi khí có hai mức bơm căng tùy vào mức độ nghiêm trọng và theo loại tai nạn.
+                Tất cả dòng xe 718 được trang bị Thanh bảo vệ chống va đập bên hông của Porsche. Tính năng an toàn này gồm các chi tiết bảo vệ chống va đập bên hông nằm phía bên trong cửa và hai túi khí nằm hai bên. Túi khí trước ngực tích hợp được đặt tại mỗi đệm bên hông của ghế và túi khí bảo vệ đều được đặt trong tấm nền cửa.</p>
+        </div>
+        <div id="detail14" class="feature-detail">
+            <h3>Hệ thống đèn chiếu sáng</h3>
+            <p>Mưa. Sương mù. Bóng tối. Không gì có thể làm vận động viên đích thực chùn bước. Đó chính là lý do vì sao dòng xe 718 được trang bị hệ thống đèn pha Bi – Xenon tích hợp đèn LED chiếu sáng ban ngày.
+                Phía đuôi xe, cụm đèn hậu thiết kế ba chiều kết hợp đèn báo phanh bốn điểm để lại ấn tượng khó phai. Khi cần chiếu sáng mạnh mẽ, tất cả chức năng được thực hiện bởi công nghệ LED.
+                Hệ thống đèn năng động của Porsche (PDLS)
+Hệ thống đèn năng động của Porsche (PDLS) bao gồm đèn chiếu sáng ban ngày bốn điểm nổi bật, hệ thống vệ sinh đèn pha và hệ thống kiểm soát vùng chiếu sáng năng động là những tùy chọn khả dụng. Chức năng chiếu sáng theo góc lái điều chỉnh đèn pha theo góc cua phía trong, dựa vào góc lái và tốc độ trên đường, làm nổi bật những đoạn cua tay áo và ngã rẽ. Một cách đơn giản, đoạn đường phía trước được chiếu sáng ngay khi xe vào cua.</p>
+        </div>
+        <div id="detail15" class="feature-detail">
+            <h3>Các thanh bảo vệ khi lật xe</h3>
+            <p>Trên dòng xe 718 Boxster mui trần, bộ thanh bảo vệ khi lật xe tạo khoảng trống sinh tồn trong trường hợp lật xe hoặc va chạm bên hông. Các chi tiết bảo vệ khi lật xe được chế tạo từ thép siêu cứng. Các thanh bảo vệ khi lật xe phía sau nằm ngay sau hàng ghế và được chế tạo từ hợp kim nhôm và thép. Hệ thống các thanh bảo vệ khi lật này không chỉ làm đẹp mà còn mang lại độ an toàn cao.</p>
+        </div>
+        <div id="detail16" class="feature-detail">
+            <h3>Hệ thống phanh</h3>
+            <p>Trong thể thao, hiệu suất có vai trò cực kì quan trọng, cả về động cơ và hệ thống phanh. Vì thế, dòng xe 718 mới được trang bị bộ kẹp phanh cố định đĩa đôi bằng nhôm 4 pít – tông.
+                Trên mâm xe 718 Boxster và 718 Cayman, bộ kẹp phanh tiêu chuẩn được sơn màu đen – màu đỏ dành cho dòng xe S. Đường kính đĩa phanh trước rộng 330mm và đường kính đĩa phanh sau rộng 299mm.
+                Để đảm bảo bộ kẹp phanh vừa cứng cáp vừa nhẹ hơn và phản hồi nhanh hơn – ngay cả khi chịu lực cực lớn – bộ kẹp phanh có cấu trúc đơn khối khép kín.
+                Hành trình chân phanh ngắn và chính xác. Bộ đĩa phanh được khoan đối xứng tâm và có thông gió phía trong cải thiện phanh khi ướt và tối ưu tản nhiệt.</p>
+        </div>
+        <div id="detail17" class="feature-detail">
+            <h3>Gói thiết kế hệ thống chiếu sáng</h3>
+            <p>Tùy chọn Gói thiết kế hệ thống chiếu sáng vừa thiết thực vừa mang tính thẩm mỹ cao, bao gồm hệ thống đèn LED có thể giảm cường độ sáng trong nhiều vùng nội thất.</p>
+        </div>
+        <div id="detail18" class="feature-detail">
+            <h3>Nội thất</h3>
+            <p>Vô – lăng thể thao hoàn toàn mới với thiết kế thuần khiết, bảng điều khiển trung tâm hướng lên, cụm đồng hồ với đồng hồ vòng tua đặt chính giữa: tất cả chi tiết trong nội thất đều đặt người lái lên hàng đầu. Tất cả nút bấm và chức năng đều trực quan, dễ dàng điều khiển, tất cả mọi thông tin luôn sẵn sàng.
+Khái niệm tập trung vào công năng không chỉ tiết kiệm thời gian mà còn trông hấp dẫn. Tại Porsche, chức năng và thiết kế không thể tách rời.
+                Hệ thống quản lý liên lạc của Porsche (PCM) hoàn toàn mới với màn hình cảm ứng đa chạm 7inch và mô-đun dẫn đường tùy chọn nâng cao hình thức và chức năng với các thiết bị khác: khả năng gần như vô tận. Mô-đun tùy chọn Connect và Connect Plus là cánh cửa đưa người lái vào thế giới kỹ thuật số.
+                Cụm đồng hồ với màn hình 4,6inch cung cấp thông tin liên tục cho người lái từ bộ xử lý ngay trên xe. Màn hình này cũng hiển thị bản đồ của tùy chọn hệ thống dẫn đường, cung cấp thông tin cảnh báo và nhắc nhở người lái về thiết lập âm thanh và hệ thống liên lạc được chọn.
+                Các loại vật liệu đều phù hợp với thách thức thể thao. Vật liệu da và Alcantara độ bám cao, ghế thể thao lót nệm cứng ôm người lái trong suốt quá trình rẽ cua.</p>
+        </div>
+        <div id="detail19" class="feature-detail">
+            <h3>Tùy chọn ghế</h3>
+            <p>Ghế thể thao
+                Ghế thể thao đầy thoải mái và ôm người lái ngay cả trong lúc vận hành mạnh mẽ. Ghế thể thao được trang bị tựa lưng điều chỉnh điện, độ cao và tịnh tiến ghế tới/lùi điều chỉnh cơ.
+                Mặt giữa ghế được bọc bằng da Alcantara.
+                Ghế thể thao chỉnh điện hoàn toàn
+                Không cần phải hy sinh sự thoải máu cũng như cảm giác lái thể thao. Tùy chọn ghế thể thao chỉnh điện hoàn toàn cung cấp ghế ngồi với độ cao, góc tựa lưng và tư thể ngồi điều chỉnh điện. Tịnh tiến ghế tới/lùi, tựa hông bốn chiều và cả trụ lái cũng có thể điều chỉnh điện. Gói nhớ vị trí bao gồm nhiều thiết lập như vị trí của hai kính chiếu hậu bên ngoài cũng như tất cả vị trí ghế người lái và vô – lăng.
+                Ghế thể thao cao cấp
+                Tùy chọn bao gồm ghế thể thao cao cấp bọc da với tựa lưng điều chỉnh điện và độ cao ghế, tịnh tiến ghế điều chỉnh cơ. Các tấm đệm bên hông và tựa lưng sử dụng đệm lót cứng hơn, mang lại điểm tựa hai bên tốt hơn.
+                Ghế thể thao linh hoạt cao cấp
+                Được sản xuất theo yêu cầu, ghế thể thao linh hoạt cao cấp củng cố sự hòa hợp của tính thể thao và sự thoải mái. Là một phiên bản nâng cấp của ghế thể thao cao cấp, kết hợp tất cả tính năng của ghế thể thao chỉnh điện và bổ sung thêm chức năng điều chỉnh điện của hai tấm đệm hông và tựa lưng.</p>
+        </div>
+        <div id="detail20" class="feature-detail">
+            <h3>Các hệ thống hỗ trợ</h3>
+<p>Hệ thống Kiểm soát hành trình chủ động kết hợp tính năng An toàn chủ động của Porsche (PAS)
+                Tùy chọn kết hợp với Hộp số tự động ly hợp kép của Porsche (PDK), phiên bản nâng cao của hệ thống kiểm soát hành trình điều chỉnh đồng bộ tốc độ xe với xe đi trước một cách chủ động. Cảm biến ra-đa giám sát đoạn đường phía trước lên đến 200m. Thêm vào đó, tính năng chạy trớn cũng khả dụng ngay trong khi hệ thống kiểm soát hành trình hoạt động.
+                Nếu tính năng An toàn chủ động của Porsche (PAS) phát hiện xe của bạn đang tiến đến xe phía trước quá nhanh, hệ thống sẽ đưa ra cảnh báo âm thanh và hình ảnh. Nếu cần thiết, cảnh báo có thể đi kèm với nhấp phanh một đoạn ngắn và bắt đầu phanh theo mục tiêu. Trong suốt quá trình này, nếu người lái đạp phanh với lực bất ký, hệ thống sẽ triển khai lực phanh mạnh hết mức có thể.
+                Hệ thống Hỗ trợ chuyển làn
+                Hệ thống hỗ trợ chuyển làn hoàn toàn mới, là một tùy chọn khả dụng, sử dụng cảm biến ra-đa để giám sát các khu vực sau đuôi xe và điểm mù hai bên. Khi tốc độ chênh lệch trên 15km/h, hệ thống đưa ra cảnh báo trực quan trên tấm ốp của kính chiếu hậu trên cửa khi có xe khác tiến gần xe bạn từ phía sau hoặc đi vào điểm mù. Bằng cách này, Hệ thống hỗ trợ chuyển làn cải thiện sự thoải mái và an toàn, đặc biệt trên đường cao tốc. Tuy nhiên, hệ thống không chủ động can thiệp điều khiển xe và có thể vô hiệu hóa bất kỳ lúc nào.</p>
+        </div>
+        <h1>Chi tiết hình ảnh</h1>
+        <div class="slideshow-container">
+            <!-- Ảnh 1 -->
+            <div class="slide">
+                <img src="https://media.ed.edmunds-media.com/mercedes-benz/maybach-gls/2025/oem/2025_mercedes-benz_maybach-gls_4dr-suv_gls-600_fq_oem_1_1600.jpg">
+            </div>
+        
+            <!-- Ảnh 2 -->
+            <div class="slide">
+                <img src="https://www.mercedes-benz.com.vn/content/vietnam/vi/passengercars/models/suv/gls-maybach/overview/_jcr_content/root/responsivegrid/tabs/tabitem/highlight/image.component.damq5.3339411550472.jpg/mercedes-maybach-gls-x167-exterior-highlights-01-2176x1224-09-2022.jpg">
+            </div>
+        
+            <!-- Ảnh 3 -->
+            <div class="slide">
+                <img src="https://mercedesbenzcar.com/wp-content/uploads/2022/08/mercedes-maybach-gls-600_23.jpg">
+            </div>
+            <!-- Ảnh 4 -->
+            <div class="slide">
+                <img src="https://admin.vov.gov.vn/UploadFolder/KhoTin/Images/UploadFolder/VOVVN/Images/sites/default/files/styles/large/public/2022-07/mansory-mercedes-maybach-s-class-26.jpg">
+            </div>
+            <!-- Ảnh 5 -->
+            <div class="slide">
+<img src="https://admin.vov.gov.vn/UploadFolder/KhoTin/Images/UploadFolder/VOVVN/Images/sites/default/files/styles/large/public/2022-07/mansory-mercedes-maybach-s-class-26.jpg">
+            </div>
+            <!-- Ảnh 6 -->
+            <div class="slide">
+                <img src="https://autobikes.vn/stores/news_dataimages/nguyenthuy/072022/14/15/3903_Mercedes-Maybach_GLS_600_Edition_100__5.jpg?rt=20220714154138">
+            </div>
+            <!-- Ảnh 7 -->
+            <div class="slide">
+                <img src="https://autobikes.vn/stores/news_dataimages/nguyenthuy/072022/14/15/3905_Mercedes-Maybach_GLS_600_Edition_100__6.jpg?rt=20220714154158">
+            </div>
+
+           
+            
+        <!-- Nút mũi tên trái/phải -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        <script src="1.js"></script>
+    </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+showSlide(slideIndex);
+
+function changeSlide(n) {
+    showSlide(slideIndex += n);
+}
+
+function showSlide(n) {
+    let slides = document.getElementsByClassName("slide");
+
+    if (n >= slides.length) {
+        slideIndex = 0;
+    } else if (n < 0) {
+        slideIndex = slides.length - 1;
+    }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[slideIndex].style.display = "block";
+}
+</script>
+     <script>
+      function toggleFeatureDetail(id) {
+                // Lấy phần tử nội dung chi tiết với ID được chọn
+                const detailSection = document.getElementById(id);
+                // Kiểm tra trạng thái hiện tại và chuyển đổi
+                if (detailSection.style.display === "none" || detailSection.style.display === "") {
+                    detailSection.style.display = "block"; // Hiện nội dung
+                } else {
+                    detailSection.style.display = "none"; // Ẩn nội dung
+                }
+    }
+    </script>
+    <script>
+    function showTabContent(index) {
+        // Lấy tất cả các phần tử tab và nội dung
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.tab-content');
+
+        // Loại bỏ lớp 'active' khỏi tất cả các tab và nội dung
+        tabs.forEach(tab => tab.classList.remove('active'));
+        contents.forEach(content => content.classList.remove('active'));
+
+        // Thêm lớp 'active' vào tab và nội dung được chọn
+        tabs[index].classList.add('active');
+        contents[index].classList.add('active');
+    }
+    </script>
+    
+</body>
+</html>

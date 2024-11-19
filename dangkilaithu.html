@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Lái Thử Xe</title>
+    <style>
+        /* Phong cách CSS */
+        body {
+            font: optional;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://png.pngtree.com/background/20230412/original/pngtree-auto-business-technology-blu-ray-picture-image_2401486.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .background-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+        
+        .form-container {
+            padding: 20px;
+            width: 500px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            background-color: white;
+            z-index: 1;
+        }
+        
+        .form-container h2 {
+            text-align: center;
+            color: #c60000;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            font-weight: bold;
+            color: #c60000;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: calc(100% - 16px);
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            text-align: justify;
+            box-sizing: border-box;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #c60000;
+        }
+        
+        .submit-btn {
+            width: calc(100% - 16px);
+            padding: 10px;
+            background-color: #c60000;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .submit-btn:hover {
+            background-color: #a50000;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="form-container">
+        <h2>ĐĂNG KÝ LÁI THỬ XE</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="danh-xung">Danh xưng *</label>
+                <select id="danh-xung" name="danh-xung" required>
+                    <option value="" disabled selected>Chọn danh xưng</option>
+                    <option value="anh">Anh</option>
+                    <option value="chi">Chị</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="ten">Tên *</label>
+                <input type="text" id="ten" name="ten" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="ho">Họ *</label>
+                <input type="text" id="ho" name="ho" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="so-dien-thoai">Số điện thoại *</label>
+                <input type="tel" id="so-dien-thoai" name="so-dien-thoai" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="thanh-pho">Thành phố/ Tỉnh *</label>
+                <select id="thanh-pho" name="thanh-pho" required>
+                    <option value="" disabled selected>Please select ...</option>
+                    <option value="ha-noi">Hà Nội</option>
+                    <option value="tp-hcm">TP. Hồ Chí Minh</option>
+                    <option value="da-nang">Đà Nẵng</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="quan-huyen">Quận/ Huyện *</label>
+                <input type="text" id="quan-huyen" name="quan-huyen" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="ten-xe">Chọn xe muốn đăng kí *</label>
+                <select id="ten-xe" name="ten-xe" required>
+                    <option value="" disabled selected>Chọn tên xe</option>
+                    <option value="718 Boxster">718 Boxster</option>
+                    <option value="718 Boxster S">718 Boxster S</option>
+                    <option value="718 Cayman">718 Cayman</option>
+                    <option value="911 Carrera">911 Carrera</option>
+                    <option value="911 Carrera 4 GTS">911 Carrera 4 GTS</option>
+                    <option value="911 Targa 4 GTS">911 Targa 4 GTS</option>
+                    <option value="Taycan 4S">Taycan 4S</option>
+                    <option value="Taycan Turbo S">Taycan Turbo S</option>
+                    <option value="Maybach S-Class">Maybach S-Class</option>
+                    <option value="Maybach GLS">Maybach GLS</option>
+                    <option value="BMW iX3">BMW iX3</option>
+                    <option value="BMW i4">BMW i4</option>
+                    <option value="BMW i7">BMW i7</option>
+                    <option value="BMW XM">BMW XM</option>
+                </select>
+            </div>
+
+            <button type="button" class="submit-btn" onclick="validateForm()">Đăng ký</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            const form = document.getElementById('registrationForm');
+            const inputs = form.querySelectorAll('input, select');
+            let isValid = true;
+
+            inputs.forEach(input => {
+                if (!input.value) {
+                    isValid = false;
+                }
+            });
+
+            if (!isValid) {
+                alert("Vui lòng nhập đầy đủ thông tin.");
+            } else {
+                alert("Đăng kí thành công"); // Hiển thị thông báo
+                form.submit(); // Sau khi thông báo, gửi form
+                window.location.href = 'index.html';
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm Mercedes</title>
+    <style>
+        body {
+            font: optional;
+            box-sizing: border-box;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .tab-container {
+            z-index: 1; 
+            position:fixed;
+            display: flex;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px auto;
+            text-align: center;
+            width: fit-content;
+        }
+        .tab {
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            flex-grow: 1;
+            color: #333;
+            background-color: #fff;
+            border-right: 1px solid #e0e0e0;
+            transition: background-color 0.3s;
+        }
+        .tab:last-child {
+            border-right: none;
+        }
+        .tab.active {
+            background-color: #333;
+            color: #fff;
+        }
+        .tab img {
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        .container {
+            display: flex;
+            width: 100vw; /* Full width of the viewport */
+        }
+        .sidebar {
+            width: 300px;
+            padding: 100px 0px 0px 30px;
+            background-color: #f7f7f7;
+            border-right: 1px solid #e0e0e0;
+            box-sizing: border-box; /* Ensure padding doesn’t affect width */
+        }
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .sidebar label {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .sidebar label img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+        .content {
+            padding: 100px 0px 0px 30px;;
+            flex-grow: 1;
+            display:block;
+        }
+        .vehicle-listing {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .vehicle-listing a {
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        .vehicle-listing a:hover {
+            transform: translateY(-5px);
+        }
+        .vehicle {
+            width: 200px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #fff;
+            transition: box-shadow 0.3s;
+        }
+        .vehicle:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .vehicle img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .vehicle h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
+        .vehicle p {
+            font-size: 16px;
+            color: #666;
+        }
+        .btn-electric {
+            background-color: #ddd;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #333;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab-container">
+        <div class="tab" onclick="setActiveTab(this, 'tatca.html')">Tất cả các mẫu xe</div>
+        <div class="tab" onclick="setActiveTab(this, 'sanphamPorsche.html')">PORSCHE</div>
+        <div class="tab  active" onclick="setActiveTab(this, 'sanphamMercedes.html')">MERCEDES</div>
+        <div class="tab" onclick="setActiveTab(this, 'sanphamBMW.html')">BMW</div>
+    </div>
+
+    <script>
+        function setActiveTab(selectedTab, targetPage) {
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            selectedTab.classList.add('active');
+            window.location.href = targetPage;
+        }
+        window.onload = function() {
+            // Kiểm tra nếu trang được tải lại
+            if (window.performance.getEntriesByType("navigation")[0].type === "reload") {
+                // Điều hướng về trang chủ khi tải lại trang
+                window.location.href = 'index.html'; 
+            }
+        }
+    </script>
+    
+
+    <div class="container">
+        <!-- Sidebar Filters -->
+        <div class="sidebar">
+            <h2>Loại thân xe</h2>
+            <label><img src="https://cdn-icons-png.flaticon.com/512/55/55283.png" alt="Sedan"> Sedans</label>
+            <label><img src="https://thumb.ac-illust.com/53/53cb538ff9137fccbf77f9f8cad98cb8_t.jpeg" alt="SUV"> Xe địa hình / SUV</label>
+            <label><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyOnOzECvoOgq-qwcS6c7XkWS-RfFRfPJ2BQ&s" alt="Coupé"> Xe Coupé</label>
+            <label><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWCbphC2-BTw2UgPimWizgkGaU5c5lsp4JdQ&s" alt="Cabriolet"> Cabriolet</label>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <h2>S - Class</h2>
+            <div class="vehicle-listing">
+                <a href="maybch S-class.html">
+                    <div class="vehicle">
+                        <img src="https://dailymuabanxe.net/wp-content/uploads/2022/11/Mercedes-S-Class-Mau-Trang.jpg">
+                        <h3>Mercedes-Maybach S-Class</h3>
+                        <p>Giá từ  8.199.000.000 VNĐ</p>
+                    </div>
+                </a>
+            </div>
+            <h2 style=>GLS</h2>
+            <div class="vehicle-listing">
+                <a href="maybach GLS.html">
+                    <div class="vehicle">
+                        <img src="https://www.mercedes-benz.com.vn/content/dam/hq/passengercars/cars/gls/mercedes-maybach-gls-x167-pi/overview/modeloverview/09-2022/images/mercedes-maybach-gls-x167-modeloverview-696x392-09-2022.png">
+                        <h3>Mercedes-Maybach GLS</h3>
+                        <p>Giá từ  8.799.000.000 VNĐ</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

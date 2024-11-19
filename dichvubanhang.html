@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch vụ bán hàng</title>
+    <style>
+body{
+  font: optional;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #000;
+  width:100%;
+  display:block;
+  box-sizing: border-box;
+}
+
+.header1 {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  padding: 10px 0px;
+  box-sizing: border-box;
+
+
+
+}
+.hed1-1{
+  display:flex;
+  justify-content: space-between;
+  
+}
+
+.header-logo img {
+  width: 150px;
+  height: 125px;
+  text-align: center;
+}
+.language-options a {
+  text-decoration: none;
+  color: #fff;
+  gap:20px;
+  box-sizing: border-box;
+  font-size: 1.15em;
+  padding-right:15px;
+}
+.language-options a:hover{
+  color:aquamarine;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.search-box input {
+  background: none;
+  border: none;
+  color: #bbb;
+  padding: 5px;
+  outline: none;
+  width:300px;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  color: #bbb;
+  cursor: pointer;
+}
+
+.menu {
+  display: inline-flex;
+  justify-content: center;
+  background-color: rgb(35, 35, 35);
+  padding: 10px 40px;
+  width:100%;
+  box-sizing: border-box;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0px 30px;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.menu1 {
+  margin-left: 480px;
+  color: #bbb;
+}
+
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none; 
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  font-size:1em;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+
+.dropdown1 {
+  position: relative;
+}
+
+.dropdown-content1 {
+  display: none; 
+  position: absolute;
+  top: 0; 
+  left: 100%;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content1 a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown1:hover .dropdown-content1 {
+  display: block; 
+}
+
+.dropdown-content1 a:hover {
+  background-color: #ddd;
+}
+
+
+.button-specs {
+            display: inline-flex;
+            align-items: center;
+            background-color: rgb(147, 146, 146);
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            justify-content: flex-end; 
+        }
+        .button-specs:hover {
+            background-color: #b00000;
+        }
+        .button-specs::before {
+            content: "❯";
+            margin-right: 8px;
+            font-size: 18px;
+        }
+   .nd{
+    padding:20px;
+    text-align: justify;
+   }
+   p{
+    font-size: 20px;
+   }
+    </style>
+</head>
+<body>
+  <div class="header">
+    <div class="hed1-1">
+        <div class="header-logo">
+            <img src="https://www.garageart.com/wp-content/uploads/2019/05/Porsche-Neon-Sign-USA-Made-Garage-Art-Featured.jpg">
+        </div>
+    <div class="header1">
+        <!-- Language and Search -->
+        <div class="language-options">
+            <a href="dangki.html">Đăng kí</a>| &nbsp;<a href="dangnhap.html">Đăng nhập</a>
+        </div>
+        
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" placeholder="Từ khóa tìm kiếm">
+            <button>&#128270;</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- Main Menu -->
+    <div class="menu">
+        <div class="dropdown">
+            <a href="index.html">Trang chủ</a>
+
+        </div>
+        <div class="dropdown">
+        <a href="tatca.html">Các hãng xe</a>
+        <div class="dropdown-content">
+            <a href="sanphamPorsche.html">Porsche</a>
+            <a href="sanphamMercedes.html">Mercedes</a>
+            <a href="sanphamBMW.html">BMW</a>
+        </div>
+        </div>
+        <div class="dropdown">
+        <a href="dangkilaithu.html">Đăng kí lái thử</a>
+    </div>
+    <div class="dropdown">
+        <a href="dichvu.html">Dịch vụ</a>
+        <div class="dropdown-content">
+            <a href="dichvubanhang.html">Dịch vụ bán hàng</a>
+            <a href="dichvuhaumai.html">Dịch vụ hậu mãi</a>
+        </div>
+        </div>
+    </div>
+        
+    </div>
+</div>
+</div>
+    <div class="mau">
+    <img src="https://porsche-vietnam.vn/wp-content/uploads/2023/03/Porsche-Centre-Saigon-Sales-services-300323-1600x615.jpeg" width="100%">
+    </div>
+    <div class="nd">
+    <h1>
+        Đam mê xe – Một bước gần hơn với chiếc xe mơ ước
+    </h1>
+    <p>Xe luôn là thương hiệu xe thể thao sang trọng, thanh lịch và đẳng cấp hàng đầu thế giới. Mỗi một tuyệt phẩm xe ra đời đều dễ dàng nhận diện ngay bởi những dấu ấn đặc trưng của Porsche. Không có gì ngạc nhiên khi người hâm mộ thương hiệu xe hơi thể thao Porsche đều sành điệu, cá tính, luôn thể hiện một phong cách riêng và đặc biệt rất kỹ tính. Khách hàng am hiểu về Porsche, từ kỹ thuật cho đến dịch vụ đều luôn yêu cầu phải đảm bảo đạt chất lượng cao với dịch vụ hoàn hảo nhất. Khách hàng của Porsche đa số là những người biết hưởng thụ cuộc sống và mỗi dòng xe Porsche mà họ đã chọn đều toát lên một phong cách độc đáo mang cá tính riêng của mình. Chúng tôi luôn luôn hiểu được nhu cầu với tính cá nhân hóa của khách hàng ngày càng cao.</p>
+    <h3>Đến với chiếc  mơ ước tại  Việt Nam</h3>
+    <p>Khi đến với cửa hàng, đội ngũ chuyên viên chuyên nghiệp và thân thiện sẽ tư vấn cho quý khách về các dòng xe và dịch vụ tùy chọn nhằm cá tính hóa chiếc xe Porsche mà quý khách mong muốn. Đội ngũ chuyên viên và kỹ thuật viên của chúng tôi đều là những chuyên gia được đào tạo bài bản về chuyên môn, nghiệp vụ, cùng sự đam mê sâu sắc với nghề, chúng tôi chắc chắn quý khách sẽ có dịp được các chuyên gia của Porsche hỗ trợ tối đa để có thể tự chọn cho mình chiếc Porsche thể hiện cá tính riêng. Một trong những dịch vụ để đạt được mục tiêu này là Porsche Exclusive Manufaktur – Bộ Trang Thiết Bị Đặc Biệt luôn sẵn có tại xưởng dịch vụ của Porsche. Các chuyên gia hội tụ các kỹ năng thủ công nhất trong ngành xe hơi sẽ sử dụng những trang thiết bị, phụ tùng, vật liệu tốt nhất do Porsche sản xuất cho từng chi tiết tùy chọn của quý khách
+
+        Nhằm thỏa mãn lòng mong đợi đối với khách hàng đã sở hữu xe và muốn tinh chỉnh các trang thiết bị thêm nữa, chúng tôi hân hạnh giới thiệu gói dịch vụ Tequipment – Bộ Trang Thiết Bị Kỹ Thuật đặc biệt của Porsche sẽ đáp ứng được nhu cầu này. Tequipment là một bộ sưu tập độc quyền được chắt lọc và thiết kế dành riêng cho xe Porsche, được phát triển bởi các nhà thiết kế và kỹ sư cấp cao từ Porsche AG, Đức. Tequipment cung cấp một loạt các phụ kiện được thiết kế nhằm cá tính hoá chiếc xe Porsche của quý khách, hơn nữa còn bao gồm các thiết bị tùy chọn cho động cơ, gói tùy chọn thân xe, hệ thống ống xả thể thao, các kiểu mâm xe tùy chọn và nhiều tùy chọn khác hơn nữa
+        
+        Chúng tôi hân hạnh chia sẻ cùng một niềm đam mê với quý khách: xe hơi thể thao. Với đội ngũ chuyên viên kinh doanh được đào tạo chuyên nghiệp không chỉ am hiểu những kiến thức về xe mà còn tất cả phụ kiện cho xe. Chúng tôi tin và chắc chắn rằng với mỗi thành viên hoàn hảo, chuyên nghiệp nhất cùng với kiến thức và dịch vụ khách hàng xuất sắc, quý khách sẽ luôn hài lòng và chọn được chiếc Porsche theo phong cách riêng của mình. Thường xuyên được đào tạo, không ngừng nâng cao kỹ năng và kiến thức, đội ngũ kinh doanh của chúng tôi luôn nắm được những thông tin mới nhất về các dòng xe của Porsche và thị trường xe hơi tại Việt Nam. Họ thực sự là những chuyên gia hàng đầu hỗ trợ quý khách trong quá trình sở hữu chiếc xe Porsche mơ ước.
+        Chúng tôi vui mừng được đón tiếp quý khách tại Porsche Việt Nam. Để biết thêm thông tin chi tiết, quý khách vui lòng liên hệ đội ngũ kinh doanh của chúng tôi:</p></div>
+</body>
+</html>

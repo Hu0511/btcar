@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm Porsche</title>
+    <style>
+        body {
+            font: optional;
+            box-sizing: border-box;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .tab-container {
+            z-index: 1; 
+            position:fixed;
+            display: flex;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px auto;
+            text-align: center;
+            width: fit-content;
+        }
+        .tab {
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            flex-grow: 1;
+            color: #333;
+            background-color: #fff;
+            border-right: 1px solid #e0e0e0;
+            transition: background-color 0.3s;
+        }
+        .tab:last-child {
+            border-right: none;
+        }
+        .tab.active {
+            background-color: #333;
+            color: #fff;
+        }
+        .tab img {
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        .container {
+            display: flex;
+            width: 100vw; /* Full width of the viewport */
+        }
+        .sidebar {
+            width: 305px;
+            padding: 100px 0px 0px 30px;
+            background-color: #f7f7f7;
+            border-right: 1px solid #e0e0e0;
+            box-sizing: border-box; /* Ensure padding doesn’t affect width */
+        }
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .sidebar label {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .sidebar label img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+        .content {
+            padding: 100px 0px 0px 30px;;
+            flex-grow: 1;
+            display:block;
+        }
+        .vehicle-listing {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .vehicle-listing a {
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        .vehicle-listing a:hover {
+            transform: translateY(-5px);
+        }
+        .vehicle {
+            width: 200px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #fff;
+            transition: box-shadow 0.3s;
+        }
+        .vehicle:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .vehicle img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .vehicle h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
+        .vehicle p {
+            font-size: 16px;
+            color: #666;
+        }
+        .btn-electric {
+            background-color: #ddd;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #333;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab-container">
+        <div class="tab" onclick="setActiveTab(this, 'tatca.html')">Tất cả các mẫu xe</div>
+        <div class="tab active" onclick="setActiveTab(this, 'sanphamPorsche.html')">PORSCHE</div>
+        <div class="tab" onclick="setActiveTab(this, 'sanphamMercedes.html')">MERCEDES</div>
+        <div class="tab" onclick="setActiveTab(this, 'sanphamBMW.html')">BMW</div>
+    </div>
+
+    <script>
+        function setActiveTab(selectedTab, targetPage) {
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            selectedTab.classList.add('active');
+            window.location.href = targetPage;
+        }
+        window.onload = function() {
+            // Kiểm tra nếu trang được tải lại
+            if (window.performance.getEntriesByType("navigation")[0].type === "reload") {
+                // Điều hướng về trang chủ khi tải lại trang
+                window.location.href = 'index.html'; 
+            }
+        }
+    </script>
+    
+
+    <div class="container">
+        <!-- Sidebar Filters -->
+        <div class="sidebar">
+            <h2>Loại thân xe</h2>
+            <label><img src="https://cdn-icons-png.flaticon.com/512/55/55283.png" alt="Sedan"> Sedans</label>
+            <label><img src="https://thumb.ac-illust.com/53/53cb538ff9137fccbf77f9f8cad98cb8_t.jpeg" alt="SUV"> Xe địa hình / SUV</label>
+            <label><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyOnOzECvoOgq-qwcS6c7XkWS-RfFRfPJ2BQ&s" alt="Coupé"> Xe Coupé</label>
+            <label><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWCbphC2-BTw2UgPimWizgkGaU5c5lsp4JdQ&s" alt="Cabriolet"> Cabriolet</label>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <h2>718</h2>
+            <div class="vehicle-listing">
+                <a href="718 Boxster.html">
+                    <div class="vehicle">
+                        <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/porsche-718-boxster-model.png" alt="EQS Sedan">
+                        <h3>718 Boxster</h3>
+                        <p>Giá từ 3.960.000.000 VNĐ</p>
+                    </div>
+                </a>
+                <a href="718 Boxster S.html">
+                    <div class="vehicle">
+                        <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/982-718-bos-modelimage-sideshot-960x540.png" alt="A-Class">
+                        <h3>718 Boxster S</h3>
+                        <p>Giá từ  4.880.000.000 VNĐ</p>
+                    </div>
+                </a>
+                <a href="718 Cayman.html">
+                    <div class="vehicle">
+                        <img src="https://porsche-vietnam.vn/wp-content/uploads/2018/07/model-718-cayman.png" alt="C-Class">
+                        <h3>718 Cayman</h3>
+                        <p>Giá từ 4.770.000.000 VNĐ</p>
+                    </div>
+                </a>
+            </div>
+            <h2 style=>911</h2>
+            <div class="vehicle-listing">
+                <a href="911 Carrera.html">
+                    <div class="vehicle">
+                        <img src="https://porsche-vietnam.vn/wp-content/uploads/2019/08/992-c2-modelimage-sideshot.png" alt="C-Class">
+                        <h3>911 Carrera</h3>
+                        <p>Giá từ 7.620.000.000 VNĐ</p>
+                    </div>
+                </a>
+                <a href="911 Carrera 4 GTS.html">
+                    <div class="vehicle">
+                        <img src="https://porsche-vietnam.vn/wp-content/uploads/2021/07/992-c4-gts-modelimage-sideshot-960x540.png" alt="C-Class">
+                        <h3>911 Carrera 4 GTS</h3>
+                        <p>Giá từ  10.120.000.000 VNĐ</p>
+                    </div>
+                </a>
+                <a href="911 Carrera 4 GTS.html">
+                    <div class="vehicle">
+                        <img src="https://porsche-vietnam.vn/wp-content/uploads/2021/07/992-ta4-gts-modelimage-sideshot-960x540.png" alt="C-Class">
+                        <h3>911 Targa 4 GTS</h3>
+                        <p>Giá từ  11.000.000.000 VNĐ</p>
+                    </div>
+                </a>
+                <a href="911 Sport Classic.html">
+                    <div class="vehicle">
+                        <img src="https://porsche-vietnam.vn/wp-content/uploads/2022/05/992-sc-modelimage-sideshot.png" alt="C-Class">
+                        <h3>911 Sport Classic</h3>
+                        <p>Giá từ  19.220.000.000 VNĐ</p>
+                    </div>
+                </a>
+            </div>
+            <h2>Taycan</h2>
+            <div class="vehicle-listing">
+                <a href="Taycan 4S.html">
+                    <div class="vehicle">
+                        <img src="https://porsche-vietnam.vn/wp-content/uploads/2024/09/j1-2nd-taycan-4s-modelimage-sideshot-960x540.png" alt="C-Class">
+                        <h3>Taycan 4S</h3>
+                        <p>Giá từ  5.500.000.000 VNĐ</p>
+                    </div>
+                </a>
+                <a href="Taycan Turbo S.html">
+                    <div class="vehicle">
+                        <img src="https://porsche-vietnam.vn/wp-content/uploads/2024/09/j1-2nd-taycan-tu-s-modelimage-sideshot-960x540.png" alt="C-Class">
+                        <h3>Taycan Turbo S</h3>
+                        <p>Giá từ  8.690.000.000 VNĐ</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

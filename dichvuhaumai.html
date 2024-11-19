@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch vụ hậu mãi</title>
+    <style>
+body{
+  font: optional;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #000;
+  width:100%;
+  display:block;
+  box-sizing: border-box;
+}
+
+.header1 {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  padding: 10px 0px;
+  box-sizing: border-box;
+
+
+
+}
+.hed1-1{
+  display:flex;
+  justify-content: space-between;
+  
+}
+
+.header-logo img {
+  width: 150px;
+  height: 125px;
+  text-align: center;
+}
+.language-options a {
+  text-decoration: none;
+  color: #fff;
+  gap:20px;
+  box-sizing: border-box;
+  font-size: 1.15em;
+  padding-right:15px;
+}
+.language-options a:hover{
+  color:aquamarine;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.search-box input {
+  background: none;
+  border: none;
+  color: #bbb;
+  padding: 5px;
+  outline: none;
+  width:300px;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  color: #bbb;
+  cursor: pointer;
+}
+
+.menu {
+  display: inline-flex;
+  justify-content: center;
+  background-color: rgb(35, 35, 35);
+  padding: 10px 40px;
+  width:100%;
+  box-sizing: border-box;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0px 30px;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.menu1 {
+  margin-left: 480px;
+  color: #bbb;
+}
+
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none; 
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  font-size:1em;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+
+.dropdown1 {
+  position: relative;
+}
+
+.dropdown-content1 {
+  display: none; 
+  position: absolute;
+  top: 0; 
+  left: 100%;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content1 a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown1:hover .dropdown-content1 {
+  display: block; 
+}
+
+.dropdown-content1 a:hover {
+  background-color: #ddd;
+}
+
+
+.button-specs {
+            display: inline-flex;
+            align-items: center;
+            background-color: rgb(147, 146, 146);
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            justify-content: flex-end; 
+        }
+        .button-specs:hover {
+            background-color: #b00000;
+        }
+        .button-specs::before {
+            content: "❯";
+            margin-right: 8px;
+            font-size: 18px;
+        }
+   .nd{
+    padding:20px;
+    text-align: justify;
+   }
+   .container h1{
+            text-align: center;
+        }
+        .nho{
+            display:flex;
+            gap: 50px;
+            padding:30px;
+        }
+      .nho2{
+        font-size: 16px;
+      }
+    </style>
+</head>
+<body>
+  <div class="header">
+    <div class="hed1-1">
+        <div class="header-logo">
+            <img src="https://www.garageart.com/wp-content/uploads/2019/05/Porsche-Neon-Sign-USA-Made-Garage-Art-Featured.jpg">
+        </div>
+    <div class="header1">
+        <!-- Language and Search -->
+        <div class="language-options">
+            <a href="dangki.html">Đăng kí</a>| &nbsp;<a href="dangnhap.html">Đăng nhập</a>
+        </div>
+        
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" placeholder="Từ khóa tìm kiếm">
+            <button>&#128270;</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- Main Menu -->
+    <div class="menu">
+        <div class="dropdown">
+            <a href="index.html">Trang chủ</a>
+
+        </div>
+        <div class="dropdown">
+        <a href="tatca.html">Các hãng xe</a>
+        <div class="dropdown-content">
+            <a href="sanphamPorsche.html">Porsche</a>
+            <a href="sanphamMercedes.html">Mercedes</a>
+            <a href="sanphamBMW.html">BMW</a>
+        </div>
+        </div>
+        <div class="dropdown">
+        <a href="dangkilaithu.html">Đăng kí lái thử</a>
+    </div>
+    <div class="dropdown">
+        <a href="dichvu.html">Dịch vụ</a>
+        <div class="dropdown-content">
+            <a href="dichvubanhang.html">Dịch vụ bán hàng</a>
+            <a href="dichvuhaumai.html">Dịch vụ hậu mãi</a>
+        </div>
+        </div>
+    </div>
+        
+    </div>
+</div>
+</div>
+    <img src="https://porsche-vietnam.vn/wp-content/uploads/2018/07/dich-vu-hau-mai.jpg" width="100%">
+    <div class="container">
+        <h1>Dịch Vụ Hỗ Trợ Lưu Động</h1>
+        <div class="nho">
+            <div class="nho1">
+            <img src="https://porsche-vietnam.vn/wp-content/uploads/2024/10/porsche-assistance-vietnam-thumbnail-521x384.jpg">
+        </div>
+            <div class="nho2">
+                <h2>Hỗ trợ 24/7</h2>
+            <p><b>Dịch Vụ Hỗ Trợ Lưu Động</b> độc quyền  đảm bảo hỗ trợ 24/7 trên toàn quốc trong trường hợp chiếc của bạn gặp sự cố. Đây là cam kết của chúng tôi về chất lượng dịch vụ hàng đầu và hoàn toàn miễn phí cho tất cả xe có bảo hành. Chỉ cần một cuộc gọi, chương trình Hỗ Trợ Lưu Động sẽ đảm nhận mọi việc.</p>
+            <h2>Quyền lợi</h2>
+            <ul>
+                <li>Hỗ trợ khi xe bị hỏng hóc và tai nạn (hỗ trợ tại chỗ để khôi phục tình trạng xe)</li>
+                <li>Kéo xe đến Trung tâm gần nhất</li>
+                <li>Cung cấp xe thay thế tạm thời nếu không thể sửa chữa trong một khoảng thời gian nhất định (tối đa 5 ngày với xe Porsche không thuộc dòng executive)</li>
+                <li>Khách sạn lưu trú</li>
+                <li>Chi phí tiếp tục hành trình hoặc về nhà (vé máy bay, taxi hoặc vé tàu)</li>
+                <li>Xe sẽ được giao đến nơi chỉ định hoặc về nhà của Quý khách sau khi sửa chữa hoàn tất</li>
+            </ul>
+      
+        </div>
+        </div>
+        <h1>Đội ngũ dịch vụ và cơ sở vật chất</h1>
+        <div class="nho">
+            <div class="nho1">
+            <img src="https://porsche-vietnam.vn/wp-content/uploads/2013/11/porsche-vietnam-dichvu-saubanhang-420x280.jpg" width="520px">
+        </div>
+            <div class="nho2">
+                <h2>Đội ngũ dịch vụ</h2>
+            <p>Những trải nghiệm thú vị  sẽ không dừng lại sau khi Quý khách nhận chìa khoá chiếc xe mới của mình. Porsche Việt Nam hân hạnh mang đến dịch vụ hậu mãi hoàn hảo nhất trong suốt quá trình sở hữu xe của Quý khách.
+
+                Đội ngũ chuyên viên về dịch vụ hậu mãi được quản lý bởi một chuyên gia người Đức đã có kinh nghiệm hơn 10 năm tại Porsche ở nhiều nước khác nhau trên khắp thế giới. Đội ngũ của chúng tôi là các chuyên viên kỹ thuật chuyên nghiệp, được chứng nhận bởi Châu Á Thái Bình Dương. Các chuyên viên luôn được đào tạo và trang bị kiến thức về các công nghệ mới nhất. Cùng với dịch vụ hoàn hảo, quy trình bảo trì và sửa chữa xe luôn tuân theo tiêu chuẩn toàn cầu, chúng tôi tin rằng luôn làm Quý khách hài lòng.
+                
+                Tất cả các mẫu xe ra đời đều là những tuyệt phẩm độc đáo và được trang bị bởi những công nghệ hiện đại nhất. Vì vậy, việc sửa chữa và bảo trì xe cũng luôn đòi hỏi những thiết bị và công cụ đặc biệt. Tại Porsche Việt Nam, quý khách có thể yên tâm rằng tất cả các xe đều được chẩn đoán bằng những thiết bị tiên tiến nhất “Made in Germany”.</p>
+            <h2>Cơ sở vật chất</h2>
+            <p>Cơ sở vật chất Hậu Mãi của chúng tôi tại thành phố Hồ Chí Minh và Hà Nội đạt những tiêu chuẩn quốc tế cao nhất và thường xuyên được kiểm tra và chứng nhận bởi toàn cầu.</p>
+        </div>
+        </div>
+
+        <h1>Bảo dưỡng</h1>
+        <div class="nho">
+            <div class="nho1">
+            <img src="https://porsche-vietnam.vn/wp-content/uploads/2016/08/PS16MODID0009_low-420x280.jpg" width="520px">
+        </div>
+            <div class="nho2">
+            <p>TBảo Dưỡng Cấp Nhỏ. Ngoài việc thay nhớt động cơ, lọc nhớt và lọc gió máy lạnh, các Kỹ Thuật Viên sẽ kiểm tra kỹ lưỡng tất cả bộ phận quan trọng của xe. Tùy thuộc vào tuổi thọ xe, cây số và điều kiện sử dụng, một số phụ tùng khác có thể được thay mới.</p>
+        </div>
+        </div>
+
+        <h1>Bảo hành</h1>
+        <div class="nho">
+            <div class="nho1">
+            <img src="https://porsche-vietnam.vn/wp-content/uploads/2016/08/PS19CUSID0011_CN_low-521x384.jpg" width="520px">
+        </div>
+            <div class="nho2">
+            <p>Porsche Việt Nam cung cấp tiêu chuẩn phạm vi bảo hành dài hạn cho tất cả dòng xe Porsche. Toàn bộ phạm vi bảo hành được thiết kế riêng nhằm mang lại sự an tâm cho khách hàng và đảm bảo hiệu suất của mỗi chiếc xe luôn được duy trì một cách tốt nhất.</p>
+        </div>
+        </div>
+    </div>
+    
+</body>
+</html>

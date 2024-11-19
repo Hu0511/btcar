@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập </title>
+    <style>
+body {
+    font: optional;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://cdn-media.sforum.vn/storage/app/media/ctv_seo4/Van%20Pham/7/hinh-nen-sieu-xe-3.jpg') center/cover no-repeat fixed;
+    position: relative;
+}
+
+/* Thêm lớp phủ tối */
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Lớp phủ tối với độ mờ */
+    z-index: 0;
+}
+
+
+/* Container for the login form */
+.login-container {
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.login-container h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* Input field styling */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+
+}
+
+.input-group label {
+    font-size: 18px;
+    color: white;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-bottom: 2px solid #bbb;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+}
+
+.input-group input:focus {
+    border-bottom-color: #ff4081; /* Pink color */
+    outline: none;
+}
+
+/* Login button */
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #3c5b6f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.login-btn:hover {
+    background-color: #6f8696; /* Darker pink on hover */
+}
+
+/* Divider for "or" */
+.or {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #bbb;
+    position: relative;
+}
+
+.or::before,
+.or::after {
+    content: "";
+    display: inline-block;
+    width: 40%;
+    height: 1px;
+    background-color: #bbb;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.or::before {
+    left: 0;
+}
+
+.or::after {
+    right: 0;
+}
+
+/* Social login button */
+
+
+.social-login .tao {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #3c5b6f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.social-login .tao:hover {
+    background-color: #6f8696;
+}
+
+    </style>
+    <script>
+        let failedAttempts = 0;
+
+function validateForm(event) {
+    event.preventDefault(); 
+
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    if (username === "" || password === "") {
+        alert("Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu.");
+        return false;
+    }
+
+    if (password.length < 8) {
+        alert("Nhập sai mật khẩu");
+        handleFailedLogin();
+        return false;
+    }
+
+    // Regex for a strong password
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if (!strongPasswordRegex.test(password)) {
+        alert("Nhập sai mật khẩu");
+        handleFailedLogin();
+        return false;
+    }
+
+    // Successful login
+    alert("Đăng nhập thành công!");
+    window.location.href = 'index.html';
+    return true;
+}
+
+function handleFailedLogin() {
+    failedAttempts++;
+    if (failedAttempts >= 5) {
+        alert("Tài khoản đã bị khóa vì đã nhập sai mật khẩu quá 5 lần ");
+        window.location.href = 'index.html';
+    }
+}
+
+window.onload = function() {
+    // Redirect to home if the page is reloaded
+    if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+        window.location.href = 'index.html';
+    }
+}
+
+    </script>
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="login-container">
+        <h2>Đăng nhập</h2>
+        <form onsubmit="return validateForm(event)">
+            <div class="input-group">
+                <label for="username">Tên đăng nhập</label>
+                <input type="text" id="username" placeholder="User name">
+            </div>
+            <div class="input-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+            <div class="or">or</div>
+            <div class="social-login">
+                <a href="dangki.html"><button type="button" class="tao">Tạo tài khoản</button></a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

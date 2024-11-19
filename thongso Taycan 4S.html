@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông số</title>
+    <style>
+         body{
+            font: optional;
+            box-sizing: border-box;
+        }
+         .header {
+            position:relative;
+  background-color: #000;
+  width:100%;
+  display:block;
+  box-sizing: border-box;
+}
+
+.header1 {
+  border-bottom: 2px solid rgb(66, 66, 66);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 10px 0px;
+  box-sizing: border-box;
+
+
+}
+
+.header-logo img {
+  width: 150px;
+  height: 125px;
+  text-align: center;
+  margin-right: 800px;
+}
+
+.language-options a {
+  text-decoration: none;
+  color: #fff;
+  gap:20px;
+  box-sizing: border-box;
+  font-size: 1.15em;
+  padding-right:15px;
+}
+.language-options a:hover{
+  color:aquamarine;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.search-box input {
+  background: none;
+  border: none;
+  color: #bbb;
+  padding: 5px;
+  outline: none;
+  width:300px;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  color: #bbb;
+  cursor: pointer;
+}
+
+.menu {
+  display: inline-flex;
+  justify-content: center;
+  background-color: rgb(35, 35, 35);
+  padding: 10px 40px;
+  width:100%;
+  box-sizing: border-box;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0px 30px;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.menu1 {
+  margin-left: 480px;
+  color: #bbb;
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%; /* Positioned below the parent */
+  left: 0;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  font-size:1em;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Show dropdown on hover */
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+
+.dropdown1 {
+  position: relative;
+}
+
+.dropdown-content1 {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 0; /* Positioned below the parent */
+  left: 100%;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content1 a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown1:hover .dropdown-content1 {
+  display: block; /* Show dropdown on hover */
+}
+
+.dropdown-content1 a:hover {
+  background-color: #ddd;
+}
+.container {
+            width: 100%;
+            margin: 0 auto;
+
+
+        }
+        .muc {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+        .muc h2 {
+            margin: 0;
+        }
+        .spec-table {
+display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            gap: 20px;
+        }
+        .spec-column {
+            flex: 1;
+        }
+        .spec-column h3 {
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+            margin-top: 0;
+            font-size: 20px;
+        }
+        .spec-column table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .spec-column table td {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .spec-column table td:first-child {
+            font-weight: bold;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header1">
+        
+            <div class="header-logo">
+                <img src="https://cdn.freelogovectors.net/wp-content/uploads/2023/05/mercedes_benz_logo-freelogovectors.net_.png" alt="Logo">
+            </div>
+            <!-- Language and Search -->
+            <div class="language-options">
+                <a href="dangki.html">Đăng kí</a>| &nbsp;<a href="dangnhap.html">Đăng nhập</a>
+            </div>
+            
+            <!-- Search Box -->
+            <div class="search-box">
+                <input type="text" placeholder="Từ khóa tìm kiếm">
+                <button>&#128270;</button>
+            </div>
+        </div>
+
+        <!-- Main Menu -->
+        <div class="menu">
+            <div class="dropdown">
+                <a href="index.html">Trang chủ</a>
+
+            </div>
+            <div class="dropdown">
+            <a href="tatca.html">Các hãng xe</a>
+            <div class="dropdown-content">
+                <a href="sanphamPorsche.html">Porsche</a>
+                <a href="sanphamMercedes.html">Mercedes</a>
+                <a href="sanphamBMW.html">BMW</a>
+            </div>
+            </div>
+            <div class="dropdown">
+            <a href="dangkilaithu.html">Đăng kí lái thử</a>
+        </div>
+        <div class="dropdown">
+            <a href="dichvu.html">Dịch vụ</a>
+            <div class="dropdown-content">
+                <a href="dichvubanhang.html">Dịch vụ bán hàng</a>
+                <a href="dichvuhaumai.html">Dịch vụ hậu mãi</a>
+            </div>
+            </div>
+        </div>
+            
+        </div>
+    </div>
+    </div>
+    <img src="https://porsche-vietnam.vn/wp-content/uploads/2024/09/j1-2nd-taycan-4s-modelimage-sideshot-840x473.png" width="100%">
+    <div class="container">
+      <div class="muc">
+          <h2>Thông số kỹ thuật</h2>
+          <p>Taycan 4S</p>
+      </div>
+  
+      <div class="spec-table">
+          <!-- Cột bên trái -->
+          <div class="spec-column">
+              <h3>Động cơ</h3>
+              <table>
+                  <tr>
+                      <td>Số xi-lanh</td>
+                      <td>4</td>
+</tr>
+                  <tr>
+                      <td>Dung tích</td>
+                      <td>1.988 cm³</td>
+                  </tr>
+                  <tr>
+                      <td>Bố trí động cơ</td>
+                      <td>Đặt giữa</td>
+                  </tr>
+                  <tr>
+                      <td>Công suất</td>
+                      <td>300 PS (220 kW)</td>
+                  </tr>
+                  <tr>
+                      <td>Tại vòng tua máy</td>
+                      <td>6.500 vòng/phút</td>
+                  </tr>
+                  <tr>
+                      <td>Mô men xoắn cực đại</td>
+                      <td>380 Nm</td>
+                  </tr>
+                  <tr>
+                      <td>Tại vòng tua máy</td>
+                      <td>2.050 - 4.500 vòng/phút</td>
+                  </tr>
+                  <tr>
+                      <td>Tỉ số nén</td>
+                      <td>9,5 : 1</td>
+                  </tr>
+              </table>
+          </div>
+  
+          <!-- Cột bên phải -->
+          <div class="spec-column">
+              <h3>Mức tiêu thụ</h3>
+              <table>
+                  <tr>
+                      <td>Đô thị</td>
+                      <td>12,46 (lít/100km)</td>
+                  </tr>
+                  <tr>
+                      <td>Ngoài đô thị</td>
+                      <td>-</td>
+                  </tr>
+                  <tr>
+                      <td>Kết hợp</td>
+                      <td>9,56 (lít/100km)</td>
+                  </tr>
+              </table>
+          </div>
+      </div>
+      <div class="spec-table">
+          <!-- Cột bên trái -->
+          <div class="spec-column">
+              <h3>Hiệu suất</h3>
+              <table>
+                  <tr>
+                      <td>Tốc độ tối đa</td>
+                      <td>275 km/giờ</td>
+                  </tr>
+                  <tr>
+                      <td>Tăng tốc 0 - 100 km/giờ</td>
+                      <td>4,7 giây (4,5 giây với Gói Sport Chrono)</td>
+                  </tr>
+                  <tr>
+                      <td>Tăng tốc 0 - 160 km/giờ</td>
+                      <td>11,1 giây (10,8 giây với Gói Sport Chrono)</td>
+                  </tr>
+                  <tr>
+                      <td>Tăng tốc 80 - 120 km/giờ</td>
+                      <td></td>
+                  </tr>
+              </table>
+          </div>
+  
+          <!-- Cột bên phải -->
+          <div class="spec-column">
+              <h3>Hệ truyền động</h3>
+              <table>
+                  <tr>
+                      <td>PDK</td>
+                      <td>Hộp số tự động 7 cấp ly hợp kép của Porsche (PDK)</td>
+                  </tr>
+                  <tr>
+                      <td>Bố trí truyền động</td>
+                      <td>Dẫn động bánh sau</td>
+                  </tr>
+              </table>
+          </div>
+</div>
+      <div class="spec-table">
+        <!-- Cột bên trái -->
+        <div class="spec-column">
+            <h3>Thân xe</h3>
+            <table>
+                <tr>
+                    <td>Dài</td>
+                    <td>4.379 mm</td>
+                </tr>
+                <tr>
+                    <td>Rộng</td>
+                    <td>1.801 mm</td>
+                </tr>
+                <tr>
+                    <td>Cao</td>
+                    <td>1.281 mm</td>
+                </tr>
+                <tr>
+                    <td>Chiều dài cơ sở</td>
+                    <td>2.475 mm</td>
+                </tr>
+                <tr>
+                    <td>Tải trọng cho phép</td>
+                    <td>1.685 kg</td>
+                </tr>
+                <tr>
+                    <td>Thể tích khoang hành lý</td>
+                    <td>150 lít phía trước / 125 lít phía sau</td>
+                </tr>
+  
+            </table>
+        </div>
+
+        <!-- Cột bên phải -->
+        <div class="spec-column">
+            <h3>Giá</h3>
+            <table>
+                <tr>
+                    <td>Giá tiêu chuẩn</td>
+                    <td>5.500.000.000 VNĐ</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+  </div>
+  
+</body>
+</html>

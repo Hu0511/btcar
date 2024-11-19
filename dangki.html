@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <style>
+        /* Đặt ảnh nền toàn màn hình */
+        body {
+        
+            font: optional;
+            box-sizing: border-box;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://cdn-media.sforum.vn/storage/app/media/ctv_seo4/Van%20Pham/7/hinh-nen-sieu-xe-3.jpg') center/cover no-repeat fixed;
+            position: relative;
+        }
+
+        /* Thêm lớp phủ tối */
+        .background-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Lớp phủ tối với độ mờ */
+            z-index: 0;
+        }
+
+        /* Đặt kiểu cho khung bao ngoài */
+        .outer-container {
+            position: relative;
+            width: 550px;
+            height: 550px;
+            color:white;
+            border: 2px solid lightgrey;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            box-sizing: border-box;
+            margin: 20px;
+            border-radius: 10px;
+            z-index: 1; /* Đảm bảo form nổi lên trên nền */
+        }
+
+        .outer-container::before {
+            content: "ĐĂNG KÝ THÀNH VIÊN";
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: lightgrey;
+            color: black;
+            padding: 10px;
+            font-size: 1.05em;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .container, .login-info {
+            position: relative;
+            margin-bottom: 15px;
+            width: 100%;
+            border: 2px solid #333;
+            padding: 20px;
+            box-sizing: border-box;
+            line-height: 1.75;
+        }
+
+        .container::before {
+            content: "Thông tin cá nhân";
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            padding: 0;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .login-info::before {
+            content: "Thông tin đăng nhập";
+            position: absolute;
+            top: -15px;
+            left: 10px;
+            padding: 0;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .input-wide {
+            width: 200px;
+            background-color: lightgrey;
+        }
+
+        .input-year {
+            width: 18%;
+            background-color: lightgrey;
+        }
+
+        .input-phone, .input-email {
+            width: 245px;
+            background-color: lightgrey;
+        }
+        
+
+        .button-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .button-container input[type="submit"], .button-container input[type="button"] {
+            margin: 10px 10px;
+            cursor: pointer;
+            width: 200px;
+            height: 40px;
+            background-color: lightslategray;
+            font-size: medium;
+        }
+        textarea{
+            background-color: lightgrey;
+        }
+        select{
+            background-color: lightgrey;
+        }
+    </style>
+    <script>
+        function validateForm(event) {
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const confirmPassword = document.getElementById('confirm_password').value.trim();
+            const fullName = document.querySelector('input[name="user_id"]').value.trim();
+            const year = document.querySelector('input[name="year"]').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const phone = document.querySelector('input[name="phone"]').value.trim();
+            const email = document.querySelector('input[name="email"]').value.trim();
+
+            // Kiểm tra các trường bắt buộc không được để trống
+            if (!fullName || !year || !address || !phone || !email) {
+                alert("Các trường Họ và tên, Năm sinh, Địa chỉ, Điện thoại và Email không được để trống!");
+                return false;
+            }
+
+            // Kiểm tra năm sinh có phải là số hợp lệ
+            const currentYear = new Date().getFullYear();
+            if (isNaN(year) || year < 1900 || year > currentYear) {
+                alert("Năm sinh không hợp lệ.");
+                return false;
+            }
+
+            // Kiểm tra định dạng email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Email không đúng định dạng.");
+                return false;
+            }
+
+            // Kiểm tra định dạng số điện thoại (10 chữ số)
+            const phoneRegex = /^[0-9]{10}$/;
+            if (!phoneRegex.test(phone)) {
+                alert("Số điện thoại phải có 10 chữ số.");
+                return false;
+            }
+
+            // Kiểm tra tên đăng nhập và mật khẩu không rỗng
+            if (!username || !password || !confirmPassword) {
+                alert("Tên đăng nhập, mật khẩu và nhập lại mật khẩu không được rỗng!");
+                return false;
+            }
+
+            // Kiểm tra độ dài mật khẩu
+            if (password.length < 8) {
+                alert("Mật khẩu phải có ít nhất 8 ký tự.");
+                return false;
+            }
+
+            // Kiểm tra độ mạnh của mật khẩu
+            const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (!strongPasswordRegex.test(password)) {
+                alert("Mật khẩu phải chứa ít nhất một chữ hoa, một chữ thường, một số và một ký tự đặc biệt.");
+                return false;
+            }
+
+            // Kiểm tra khớp mật khẩu
+            if (password !== confirmPassword) {
+                alert("Mật khẩu và nhập lại mật khẩu không trùng khớp.");
+                return false;
+            }
+
+            alert("Đăng ký thành công!\nHãy load lại trang để đăng nhập");
+            return true;
+        }
+
+        function clearForm() {
+            document.querySelector('form').reset();
+        }
+        window.onload = function() {
+            if (window.performance.getEntriesByType("navigation")[0].type === "reload") {
+                window.location.href = 'dangnhap.html'; 
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="background-overlay"></div> <!-- Lớp phủ tối -->
+
+    <div class="outer-container">
+    
+        <br><br>
+        <div class="container">
+            <form onsubmit="return validateForm(event)">
+            <table>
+                <tr>
+                    <td>Họ và tên:</td>
+                    <td><input type="text" name="user_id" class="input-wide"/></td>
+                </tr>
+                <tr>
+                    <td>Ngày sinh:</td>
+                    <td>
+                        <select id="day" name="day">
+                            <script>
+                                for (let i = 1; i <= 31; i++) {
+                                    let day = i < 10 ? '0' + i : i;
+                                    document.write('<option value="' + day + '">' + day + '</option>');
+                                }
+                            </script>
+                        </select>
+                        Tháng:
+                        <select id="month" name="month">
+                            <script>
+                                for (let i = 1; i <= 12; i++) {
+                                    let month = i < 10 ? '0' + i : i;
+                                    document.write('<option value="' + month + '">' + month + '</option>');
+                                }
+                            </script>
+                        </select>
+                        Năm:<input type="text" name="year" class="input-year"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Giới tính:</td>
+                    <td>
+                        <label><input type="radio" name="gender" value="male" checked> Nam</label>
+                        <label><input type="radio" name="gender" value="female"> Nữ</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ:</td>
+                    <td><textarea id="address"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Số điện thoại:</td>
+                    <td><input type="text" name="phone" class="input-phone"/></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="text" name="email" class="input-email" /></td>
+                </tr>
+            </table>
+            </div>
+
+            <div class="login-info">
+                <table>
+                    <tr>
+                        <td>Tên đăng nhập:</td>
+                        <td><input type="text" id="username" name="username" class="input-wide" /></td>
+                    </tr>
+                    <tr>
+                        <td>Mật khẩu:</td>
+                        <td><input type="password" id="password" name="password" class="input-wide" /></td>
+                    </tr>
+                    <tr>
+                        <td>Nhập lại mật khẩu:</td>
+                        <td><input type="password" id="confirm_password" name="confirm_password" class="input-wide" /></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="button-container">
+                <input type="submit" value="Đăng ký">
+                <input type="button" value="Hủy" onclick="clearForm()">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
